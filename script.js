@@ -29,7 +29,10 @@ function createGrid(size) {
     squares.style.cssText = `width: ${size}px; height: ${size}px`;
     console.log(squares.length);
     squares.addEventListener("mouseover", function () {
-      squares.classList.add("colored");
+      let red = Math.floor(Math.random() * 256);
+      let green = Math.floor(Math.random() * 256);
+      let blue = Math.floor(Math.random() * 256);
+      squares.style.backgroundColor = `rgb(${red} ${green} ${blue})`;
     });
     containerDiv.appendChild(squares);
   }
@@ -47,5 +50,3 @@ btnNewGrid.addEventListener("click", function () {
 containerDiv.insertAdjacentElement("beforebegin", btnNewGrid);
 
 createGrid(squareSize);
-
-function randomColor() {}
