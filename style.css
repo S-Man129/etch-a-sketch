@@ -1,0 +1,23 @@
+.square {
+  height: 16px;
+  width: 16px;
+  border: 1px solid grey;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+.colored {
+  background-color: black;
+}
+
+.square:hover {
+  opacity: 50%;
+  cursor: pointer;
+}
